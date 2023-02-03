@@ -1,9 +1,8 @@
-FROM sravanirekanar/tomcat
+FROM ubuntu
 MAINTAINER sravani <sravani.rekanar@gmail.com>
-RUN cd /opt/apache-tomcat-11.0.0-M1/bin
-RUN ./startup.sh
+RUN apt-get update -y
 RUN touch /opt/file1
-#RUN apt-get install git -y
+RUN apt-get install git -y
 #RUN git config --global user.name "DevOps Training"
 #RUN git config --global user.email "polarapuprasad@gmail.com"
 #RUN cd /opt && git clone https://github.com/polarapu/batch68.git
