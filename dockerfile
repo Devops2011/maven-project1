@@ -1,6 +1,7 @@
-FROM ubuntu
-MAINTAINER devops2018 <devopstraining2015@gmail.com>
-RUN apt-get update -y
+FROM sravanirekanar/tomcat
+MAINTAINER sravani <sravani.rekanar@gmail.com>
+RUN cd /opt/apache-tomcat-11.0.0-M1/bin
+RUN ./startup.sh
 RUN touch /opt/file1
 #RUN apt-get install git -y
 #RUN git config --global user.name "DevOps Training"
