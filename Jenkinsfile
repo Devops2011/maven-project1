@@ -2,23 +2,27 @@ pipeline {
     agent any
 
     stages {
-        stage('Dev') {
+        stage('Dev stage') {
             steps {
-                echo 'Hello-Dev-Stage'
-                build quietPeriod: 5, job: 'Docker'
+                echo 'All Stages'
+                build quietPeriod: 2, job: 'a-dev-dock-01'
+                
             }
         }
-        stage('Test') {
+       stage('Test') {
             steps {
-                echo 'Hello Test-stage'
-                build quietPeriod: 5, job: 'Linux'
+                echo 'Test Stage'
+                build quietPeriod: 2, job: 'a-test-lin-02'
+                
             }
         }
         stage('Prod') {
             steps {
-                echo 'Hello Prod-stage'
-                build quietPeriod: 5, job: 'AWS'
+                echo 'Prod Stage'
+                build quietPeriod: 2, job: 'a-prod-aws-03'
+                
             }
         }
     }
 }
+

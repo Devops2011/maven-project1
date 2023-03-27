@@ -1,8 +1,10 @@
-FROM ubuntu
+FROM sravanirekanar/tomcat
 MAINTAINER sravani <sravani.rekanar@gmail.com>
-RUN apt-get update -y
-RUN touch /opt/file1
-RUN apt-get install git -y
+
+
+#RUN apt-get update -y
+#RUN touch /opt/file1
+#RUN apt-get install git -y
 #RUN git config --global user.name "DevOps Training"
 #RUN git config --global user.email "polarapuprasad@gmail.com"
 #RUN cd /opt && git clone https://github.com/polarapu/batch68.git
