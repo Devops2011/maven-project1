@@ -1,5 +1,8 @@
-FROM sravanirekanar/tomcat
+FROM tomcat/tomcat01
 MAINTAINER sravani <sravani.rekanar@gmail.com>
+
+COPY tomcat-users.xml /usr/local/tomcat/conf
+COPY context.xml /usr/local/tomcat/webapps/manager/META-INF
 
 
 #RUN apt-get update -y
